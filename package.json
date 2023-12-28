@@ -1,0 +1,46 @@
+{
+  "name": "open-in-kitty",
+  "displayName": "Open in Kitty",
+  "description": "Open the current working directory in Kitty and GitKraken from VSCode.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openInKitty"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osandell/vscode-open-in-kitty.git"
+  },
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openInKitty",
+        "title": "Open in Kitty"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.83.0",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "global": "^4.4.0"
+  }
+}
